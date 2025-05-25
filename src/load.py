@@ -14,16 +14,8 @@ def carregar_dados_bulk_upsert(dados):
         for d in dados
     ]
     stmt = insert(meu_db).values(data_dicts)
-    stmt = stmt.on_conflict_do_update(
-        index_elements=['id'],
-        set_={
-            "data": stmt.excluded.data,
-            "categoria": stmt.excluded.categoria,
-            "valor": stmt.excluded.valor,
-            "parcelas": stmt.excluded.parcelas,
-            "data_extracao": stmt.excluded.data_extracao,
-        }
-    )
+    stmt = stmt.on_conflict_do_nothing(index_elements=['id'])
+                                      
     with engine.begin() as conn:
         conn.execute(stmt)
-    print("Bulk upsert realizado no PostgreSQL.\n")
+    print("Carrgamento de dados no PostgreSQL realizado.\n")
