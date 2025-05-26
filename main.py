@@ -2,13 +2,13 @@ import time
 import tracemalloc
 from src.extract import extrair_dados, page, page_size	
 from src.transform import tratamento
-from src.load import carregar_dados_bulk_upsert
+from src.load import carregar_dados
 
 # Função para o pipeline
 def main():
     raw = extrair_dados(page, page_size)
     clean = tratamento(raw)
-    load = carregar_dados_bulk_upsert(clean)
+    load = carregar_dados(clean)
 
 # Execução do pipeline
 if __name__ == "__main__":

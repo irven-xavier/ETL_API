@@ -2,7 +2,7 @@ from src.create_db import engine, meu_db
 from sqlalchemy.dialects.postgresql import insert
 import logging
 
-def carregar_dados_bulk_upsert(dados):
+def carregar_dados(dados):
 
     try:
 
