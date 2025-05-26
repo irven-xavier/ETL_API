@@ -2,6 +2,12 @@ from src.create_db import engine, meu_db
 from sqlalchemy.dialects.postgresql import insert
 import logging
 
+logging.basicConfig(
+    
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
 def carregar_dados(dados):
 
     try:
