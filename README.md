@@ -42,9 +42,51 @@ Criar um pipeline a partir de um endpoint de uma API utilizando Python para faze
 - Python 3.11.1
 - Bibliotecas:
     - `requests`: para consumir a API
-    - `os`: para 
-    - `sqlalchemy`:
-    - `sqlalchemy`:
-    - `sqlalchemy`:
-    - `sqlalchemy`:
-    - `sqlalchemy`:
+    - `os`: para manipular as variáveis de ambiente
+    - `json`: para manipular o payload e extrair os dados
+    - `logging`: para printar os checkpoints
+    - `datetime`: para manipular datas
+    - `sqlalchemy`: para criar o db e armazenar os dados no Postgre
+    - `tracemalloc`: para monitorar o pico de memória utilizado durante toda a execução
+    - `time`: para medir o tempo de duração da execução de todo o código
+
+## Exemplo de Output
+
+<table align="left">
+  <thead>
+    <tr>
+      <th align="left" style="padding:8px 16px;background:#f0f0f0;">id</th>
+      <th align="left" style="padding:8px 16px;background:#f0f0f0;">data</th>
+      <th align="left" style="padding:8px 16px;background:#f0f0f0;">categoria</th>
+      <th align="left" style="padding:8px 16px;background:#f0f0f0;">valor</th>
+      <th align="left" style="padding:8px 16px;background:#f0f0f0;">parcelas</th>
+      <th align="left" style="padding:8px 16px;background:#f0f0f0;">data_extracao</th>
+    </tr>
+  </thead>
+<tbody>
+    <tr>
+      <td style="padding:8px 16px;">1</td>
+      <td style="padding:8px 16px;">2025-01-01 14:00:00</td>
+      <td style="padding:8px 16px;">E-Commerce</td>
+      <td style="padding:8px 16px;">32,00</td>
+      <td style="padding:8px 16px;">1x</td>
+      <td style="padding:8px 16px;">30/05/2021 16:00:00</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 16px;">2</td>
+      <td style="padding:8px 16px;">2025-02-01 16:00:00</td>
+      <td style="padding:8px 16px;">Loja Física</td>
+      <td style="padding:8px 16px;">100,00</td>
+      <td style="padding:8px 16px;">3x</td>
+      <td style="padding:8px 16px;">30/05/2021 16:00:00</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 16px;">3</td>
+      <td style="padding:8px 16px;">2025-04-01 18:00:00</td>
+      <td style="padding:8px 16px;">E-Commerce</td>
+      <td style="padding:8px 16px;">72,00</td>
+      <td style="padding:8px 16px;">À Vista</td>
+      <td style="padding:8px 16px;">30/05/2021 16:00:00</td>
+    </tr>
+      </tbody>
+</table>
