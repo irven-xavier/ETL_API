@@ -2,6 +2,13 @@ import json
 import os
 from dotenv import load_dotenv
 import requests
+import logging
+
+logging.basicConfig(
+    
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 # Carrega as variáveis de ambiente e credenciais
 load_dotenv()
@@ -57,11 +64,11 @@ def extrair_dados(page, page_size):
     dados = response.json()['items']
 
     if not dados:  # Se não tiver mais dados, para o loop
-      print(f"O retorno da API foi o código {response.status_code} \n")
-      print(f"Fim da extração. Total de páginas lidas: {page - 1} \n")
+      logging.info(f"O retorno da API foi o código {response.status_code} \n")
+      logging.info(f"Fim da extração. Total de páginas lidas: {page - 1} \n")
       break
 
-    print(f'Dados da página {page} capturados com sucesso \n')
+    logging.info(f'Dados da página {page} capturados com sucesso \n')
     
     # "Extende" os dados para fora das chaves do retorno JSON
     all_data.extend(dados)

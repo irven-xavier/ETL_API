@@ -3,6 +3,13 @@ import tracemalloc
 from src.extract import extrair_dados, page, page_size	
 from src.transform import tratamento
 from src.load import carregar_dados
+import logging
+
+logging.basicConfig(
+    
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 # Função para o pipeline
 def main():
@@ -30,7 +37,7 @@ if __name__ == "__main__":
 
     # Tempo total de execução
     execution_time = end_time - start_time
-    print(f"Tempo de execução: {execution_time:.2f} segundos \n")
+    logging.info(f"Tempo de execução: {execution_time:.2f} segundos \n")
 
     # Captura o momento final
     snapshot_fim = tracemalloc.take_snapshot()
@@ -39,7 +46,7 @@ if __name__ == "__main__":
     memoria_pico = tracemalloc.get_traced_memory()[1] / (1024 ** 2)  # Em MB
 
     # Exibe o consumo de memória
-    print(f"Pico de memória durante a execução: {memoria_pico:.2f} MB")
+    logging.info(f"Pico de memória durante a execução: {memoria_pico:.2f} MB")
 
     # Para o monitoramento
     tracemalloc.stop()
