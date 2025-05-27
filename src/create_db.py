@@ -8,16 +8,18 @@ load_dotenv()
 # Pega a url do db no .env
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 
-# Cria o engine do db
+# Cria conexão com o db
 engine = create_engine(DATABASE_URL)
 
 # Cria uma sessão no db
 Session = sessionmaker(bind=engine)
 
+# Criação de uma base
 Base = declarative_base()
 
-# Define o nome da tabela no db e cria as colunas
+# Define o modelo da tabela no db e cria as colunas
 class meu_db(Base):
+
     __tablename__ = "meu_db"
 
     id = Column(String, primary_key=True)
@@ -27,5 +29,6 @@ class meu_db(Base):
     parcelas = Column(String(10))
     data_extracao = Column(DateTime)
 
+# Gera a tabela de acordo com o Class
 Base.metadata.create_all(engine)
 
