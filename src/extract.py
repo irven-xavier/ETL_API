@@ -38,7 +38,7 @@ payload=json.dumps(
         "competenceDateFrom": "2025-01-01", # Data Inicial
         "competenceDateTo": "2025-12-31", # Data Final
         "quickFilter": "ALL", # Retira filtros adicionais indesejados
-        "categoryIds": categorias_ids, # Categorias de Venda online e Atacado
+        "categoryIds": categorias_ids, # 2 Categorias de Vendas
         "search": "", # Sem pesquisa ativa na barra de pesquisas
         "page": page, # Página Inicial
         "page_size": page_size # Tamanho inicial (100 registros por vez)
