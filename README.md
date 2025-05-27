@@ -90,3 +90,33 @@ Criar um pipeline a partir de um endpoint de uma API utilizando Python para faze
     </tr>
       </tbody>
 </table>
+
+## Como rodar o projeto
+
+### Requirements
+- Python 3+
+- Python IDE
+
+
+- Instruções:
+  - Copie o arquivo ``.env.examplo`` para `.env` e insira as suas credenciais.
+  - Instale todas as bibliotecas para rodar o main.py.
+  - Rode o script main.py
+  
+
+- Windows:
+```
+  pip3 install -r requirements.txt
+```
+```
+  python main.py
+```
+
+- Mac:
+```
+  pip3 install -r requirements.txt
+```
+
+```
+  python3 main.py
+```
