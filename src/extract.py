@@ -61,11 +61,20 @@ def extrair_dados(page, page_size):
     response = requests.post(url, params=params, headers=headers, data=payload)
 
     # Resposta da API em formato JSON
-    dados = response.json()['items']
+    if response.status_code == 200:
+
+      dados = response.json()['items']
+
+    else:
+
+      logging.error(f"Erro {response.status_code} \n")
 
     if not dados:  # Se não tiver mais dados, para o loop
+      
       logging.info(f"O retorno da API foi o código {response.status_code} \n")
+
       logging.info(f"Fim da extração. Total de páginas lidas: {page - 1} \n")
+
       break
 
     logging.info(f'Dados da página {page} capturados com sucesso \n')
