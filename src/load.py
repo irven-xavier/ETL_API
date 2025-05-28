@@ -1,4 +1,4 @@
-from src.create_db import engine, meu_db
+from src.create_db import engine, tabela_vendas
 from sqlalchemy.dialects.postgresql import insert
 import logging
 
@@ -30,7 +30,7 @@ def carregar_dados(dados):
         ]
 
         # Insere os valores do dicionário acima na tabela
-        stmt = insert(meu_db).values(data_dicts)
+        stmt = insert(tabela_vendas).values(data_dicts)
 
         # Em caso de conflito, id existente, os valores não serão adicionandos e nem atualizados
         stmt = stmt.on_conflict_do_nothing(index_elements=['id'])

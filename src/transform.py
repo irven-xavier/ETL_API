@@ -1,12 +1,12 @@
 from datetime import datetime
-from src.create_db import meu_db
+from src.create_db import tabela_vendas
 
 # Função para tratar os dados do retorno da API
 def tratamento(lista_items):
     
     return [
         
-        meu_db(
+        tabela_vendas(
             id = item['id'], # ID da transação
             data = item['competenceDate'], # Data de competência da transação
             categoria = item['categoryDescriptions'], # Categoria da transação

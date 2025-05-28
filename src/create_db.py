@@ -18,9 +18,9 @@ Session = sessionmaker(bind=engine)
 Base = declarative_base()
 
 # Define o modelo da tabela no db e cria as colunas
-class meu_db(Base):
+class tabela_vendas(Base):
 
-    __tablename__ = "meu_db"
+    __tablename__ = "tabela_vendas"
 
     id = Column(String, primary_key=True)
     data = Column(DateTime)
