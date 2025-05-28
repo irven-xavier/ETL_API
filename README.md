@@ -1,18 +1,22 @@
-# Pipeline de Dados: da API ao Postgres
+# Pipeline de Dados: da API ao PostgresSQL
 
-## Objetivo
+## Objetivos do Projeto
 
-Criar um pipeline a partir de um endpoint de uma API utilizando Python para fazer a extração, transformação e carregamento até uma tabela criada, também com Python, no Postgres SQL. 
+1. Criar um pipeline a partir de um endpoint de uma API utilizando Python para fazer a extração, transformação e carregamento (ETL) até uma tabela criada, também com Python, no Postgres SQL. 
+
+2. Medir o tempo gasto em todo o Pipeline e o pico de memória durante a execução.
+
+3. Armazenar os dados para consultas futuras.
 
 ## Etapas
 
 1. **Pré ETL**:
 
-    - Endpoint da API de vendas de um ERP
+    - Coleta do endpoint da API de vendas de um ERP
     - Teste do endpoint via Postman
     - Requisição do tipo POST
     - Autenticação com os headers (content-type, authorization e user-agent)
-    - Identificação dos parâmetros e payload(body)
+    - Identificação dos parâmetros e payload (body)
     - Setup de um banco de dados Postegres no Render
 
 2. **Criação de tabela**
@@ -37,7 +41,7 @@ Criar um pipeline a partir de um endpoint de uma API utilizando Python para faze
     - Inserção dos dados no Postgre
     - Criação de condição caso haja conflito
 
-## **Tecnologias**
+## **Tecnologias e Ferramentas**
 
 - Python 3.11.1
 - Bibliotecas:
@@ -50,9 +54,14 @@ Criar um pipeline a partir de um endpoint de uma API utilizando Python para faze
     - `tracemalloc`: para monitorar o pico de memória utilizado durante toda a execução
     - `time`: para medir o tempo de duração da execução de todo o código
 
+- Postman: para testar o endpoint da API
+- Render: para hospedar o DB
+- PostgreSQL: DB para armazenar os dados
+- pgAdmin 4: para acompanhar os dados e executar queries SQL
+
 ## Exemplo de Output
 
-<table align="left">
+<table align="center">
   <thead>
     <tr>
       <th align="left" style="padding:8px 16px;background:#f0f0f0;">id</th>
@@ -66,7 +75,7 @@ Criar um pipeline a partir de um endpoint de uma API utilizando Python para faze
 <tbody>
     <tr>
       <td style="padding:8px 16px;">1</td>
-      <td style="padding:8px 16px;">2025-01-01 14:00:00</td>
+      <td style="padding:8px 16px;">2025-01-01 00:00:00</td>
       <td style="padding:8px 16px;">E-Commerce</td>
       <td style="padding:8px 16px;">32,00</td>
       <td style="padding:8px 16px;">1x</td>
@@ -74,7 +83,7 @@ Criar um pipeline a partir de um endpoint de uma API utilizando Python para faze
     </tr>
     <tr>
       <td style="padding:8px 16px;">2</td>
-      <td style="padding:8px 16px;">2025-02-01 16:00:00</td>
+      <td style="padding:8px 16px;">2025-02-01 00:00:00</td>
       <td style="padding:8px 16px;">Loja Física</td>
       <td style="padding:8px 16px;">100,00</td>
       <td style="padding:8px 16px;">3x</td>
@@ -82,7 +91,7 @@ Criar um pipeline a partir de um endpoint de uma API utilizando Python para faze
     </tr>
     <tr>
       <td style="padding:8px 16px;">3</td>
-      <td style="padding:8px 16px;">2025-04-01 18:00:00</td>
+      <td style="padding:8px 16px;">2025-04-01 00:00:00</td>
       <td style="padding:8px 16px;">E-Commerce</td>
       <td style="padding:8px 16px;">72,00</td>
       <td style="padding:8px 16px;">À Vista</td>
@@ -90,6 +99,24 @@ Criar um pipeline a partir de um endpoint de uma API utilizando Python para faze
     </tr>
       </tbody>
 </table>
+
+
+
+## Estrutura do Projeto
+
+```bash
+ETL_API/
+├── src/
+│   ├── create_db.py/ # Criação do db no PostegreSQL
+│   ├── extract.py/ # Extração dos dados
+│   ├── load.py/ # Carregamento dos dados
+|   ├── transform.py # Transformação dos dados
+├── .env.exemplo  # Variáveis de ambiente
+├── .gitignore
+├── main.py # Roda a ETL
+├── README.md 
+└── requirements.txt
+```
 
 ## Como rodar o projeto
 
