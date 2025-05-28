@@ -1,5 +1,5 @@
 /*
-Qual foi o faturamento total da loja no período?
+Qual foi o faturamento total e o numero de vendas da loja no período?
 */
 
 select 
