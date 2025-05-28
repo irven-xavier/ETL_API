@@ -79,7 +79,7 @@
       <td style="padding:8px 16px;">E-Commerce</td>
       <td style="padding:8px 16px;">32,00</td>
       <td style="padding:8px 16px;">1x</td>
-      <td style="padding:8px 16px;">30/05/2021 16:00:00</td>
+      <td style="padding:8px 16px;">30/05/2025 15:37:50.288426</td>
     </tr>
     <tr>
       <td style="padding:8px 16px;">2</td>
@@ -87,7 +87,7 @@
       <td style="padding:8px 16px;">Loja Física</td>
       <td style="padding:8px 16px;">100,00</td>
       <td style="padding:8px 16px;">3x</td>
-      <td style="padding:8px 16px;">30/05/2021 16:00:00</td>
+      <td style="padding:8px 16px;">30/05/2025 15:37:50.288426</td>
     </tr>
     <tr>
       <td style="padding:8px 16px;">3</td>
@@ -95,7 +95,7 @@
       <td style="padding:8px 16px;">E-Commerce</td>
       <td style="padding:8px 16px;">72,00</td>
       <td style="padding:8px 16px;">À Vista</td>
-      <td style="padding:8px 16px;">30/05/2021 16:00:00</td>
+      <td style="padding:8px 16px;">30/05/2025 15:37:50.288426</td>
     </tr>
       </tbody>
 </table>
