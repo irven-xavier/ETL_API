@@ -106,6 +106,12 @@
 
 ```bash
 ETL_API/
+├── consultas_SQL/
+│   ├── faturamento.sql/ # Qual foi o faturamento total e o numero de vendas da loja no período?
+│   ├── parcelamentos.sql/ # Qual foi a forma de parcelamento por categoria no período?
+│   ├── ultimos_registros.sql # Quais foram as 5 últimas vendas?
+|   ├── vendas_categoria.sql # Quanto cada categoria vendeu?
+|   ├── vendas_mes_categoria.sql # Como foram as vendas por mês e categoria?
 ├── src/
 │   ├── create_db.py/ # Criação do db no PostegreSQL
 │   ├── extract.py/ # Extração dos dados
