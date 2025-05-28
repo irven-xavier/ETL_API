@@ -1,8 +1,8 @@
-# Pipeline de Dados: da API ao PostgresSQL
+# Pipeline de Dados: da API ao PostgreSQL
 
 ## Objetivos do Projeto
 
-1. Criar um pipeline a partir de um endpoint de uma API utilizando Python para fazer a extração, transformação e carregamento (ETL) até uma tabela criada, também com Python, no Postgres SQL. 
+1. Criar um pipeline a partir de um endpoint de uma API utilizando Python para fazer a extração, transformação e carregamento (ETL) até uma tabela criada, também com Python, no PostgreSQL. 
 
 2. Medir o tempo gasto em todo o Pipeline e o pico de memória durante a execução.
 
@@ -21,7 +21,7 @@
 
 2. **Criação de tabela**
 
-    - Conexão com o banco de dados Postgre usando credenciais
+    - Conexão com o banco de dados PostgreSQL usando credenciais
     - Início da sessão e criação do modelo no Postegre
 
 3. **Extração**:
@@ -38,7 +38,7 @@
 
 5. **Carregamento**:
 
-    - Inserção dos dados no Postgre
+    - Inserção dos dados no PostgreSQL
     - Criação de condição caso haja conflito
 
 ## **Tecnologias e Ferramentas**
@@ -50,7 +50,7 @@
     - `json`: para manipular o payload e extrair os dados
     - `logging`: para printar os checkpoints
     - `datetime`: para manipular datas
-    - `sqlalchemy`: para criar o db e armazenar os dados no Postgre
+    - `sqlalchemy`: para criar o db e armazenar os dados no PostgreSQL
     - `tracemalloc`: para monitorar o pico de memória utilizado durante toda a execução
     - `time`: para medir o tempo de duração da execução de todo o código
 
@@ -165,7 +165,7 @@ ETL_API/
         style="margin:4px; height:20px;"
       />
     </a>
-    <!-- Whatsapp -->
+<!-- Whatsapp -->
     <a href="https://wa.me/5531991156079/" target="_blank">
       <img
         src="https://img.shields.io/badge/📱-WhatsApp-25D366?style=flat-square&logo=whatsapp"
@@ -173,7 +173,7 @@ ETL_API/
         style="margin:4px; height:20px;"
       />
     </a>
-    <!-- Gmail -->
+<!-- Gmail -->
     <a href="mailto:irven.xavier@gmail.com" target="_blank">
       <img
        src="https://img.shields.io/badge/✉️-Email-D14836?style=flat-square&logo=gmail&logoColor=white"
