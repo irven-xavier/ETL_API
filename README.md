@@ -1,18 +1,20 @@
 # Pipeline de Dados: da API ao PostgreSQL
 
+Este projeto realiza uma pipeline de ETL desde um endpoint de uma URL de um ERP até o carregamento e armazenamento dos dados num banco de dados PostgreSQL.
+
 ## Objetivos do Projeto
 
-1. Criar um pipeline a partir de um endpoint de uma API utilizando Python para fazer a extração, transformação e carregamento (ETL) até uma tabela criada, também com Python, no PostgreSQL. 
+1. Criar o pipeline de ETL
 
-2. Medir o tempo gasto em todo o Pipeline e o pico de memória durante a execução.
+2. Armazenar os dados para consultas futuras. 
 
-3. Armazenar os dados para consultas futuras.
+3. Medir o tempo gasto em todo o Pipeline e o pico de memória durante a execução.
 
 ## Etapas
 
 1. **Pré ETL**:
 
-    - Coleta do endpoint da API de vendas de um ERP
+    - Coleta do endpoint da API de vendas do ERP
     - Teste do endpoint via Postman
     - Requisição do tipo POST
     - Autenticação com os headers (content-type, authorization e user-agent)
