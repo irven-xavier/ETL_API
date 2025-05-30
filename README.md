@@ -1,6 +1,6 @@
-# Pipeline de Dados: da API ao PostgreSQL
+# Pipeline de Dados: da API paginada ao PostgreSQL
 
-Este projeto realiza um pipeline de ETL desde um endpoint de uma URL de um ERP até o carregamento e armazenamento dos dados num banco de dados PostgreSQL.
+Este projeto realiza um pipeline de ETL de uma API paginada, desde um endpoint de uma URL de um ERP até o carregamento e armazenamento dos dados num banco de dados PostgreSQL.
 
 ## Objetivos do Projeto
 
