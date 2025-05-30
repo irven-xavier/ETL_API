@@ -111,6 +111,7 @@ ETL_API/
 ├── consultas_SQL/
 │   ├── faturamento.sql/ # Qual foi o faturamento total e o numero de vendas da loja no período?
 │   ├── parcelamentos.sql/ # Qual foi a forma de parcelamento por categoria no período?
+│   ├── parcelas_formatado.sql/ # Formatação de valores da coluna parcelas
 │   ├── tkt_medio_mes_categoria.sql/ # Qual foi o ticket médio por mês e categoria?
 │   ├── ultimos_registros.sql # Quais foram as 5 últimas vendas?
 |   ├── vendas_categoria.sql # Quanto cada categoria vendeu?
