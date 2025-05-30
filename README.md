@@ -114,13 +114,13 @@ ETL_API/
 │   ├── parcelas_formatado.sql/ # Formatação de valores da coluna parcelas
 │   ├── tkt_medio_mes_categoria.sql/ # Qual foi o ticket médio por mês e categoria?
 │   ├── ultimos_registros.sql # Quais foram as 5 últimas vendas?
-|   ├── vendas_categoria.sql # Quanto cada categoria vendeu?
-|   ├── vendas_mes_categoria.sql # Como foram as vendas por mês e categoria?
+│   ├── vendas_categoria.sql # Quanto cada categoria vendeu?
+│   ├── vendas_mes_categoria.sql # Como foram as vendas por mês e categoria?
 ├── src/
 │   ├── create_db.py/ # Criação do db no PostegreSQL
 │   ├── extract.py/ # Extração dos dados
 │   ├── load.py/ # Carregamento dos dados
-|   ├── transform.py # Transformação dos dados
+│   ├── transform.py # Transformação dos dados
 ├── .env.exemplo  # Variáveis de ambiente
 ├── .gitignore
 ├── main.py # Roda a ETL
