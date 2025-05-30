@@ -43,6 +43,13 @@ Este projeto realiza um pipeline de ETL de uma API paginada, desde um endpoint d
     - Inserção dos dados no PostgreSQL
     - Criação de condição caso haja conflito
 
+## Fluxo da ETL
+
+<div align="center">
+  <img src="https://github.com/irven-xavier/ETL_API/blob/main/Fluxo_ETL_API.png" 
+       alt="Fluxo ETL_API" width="700"/>
+</div>
+
 ## **Tecnologias e Ferramentas**
 
 - Python 3.11.1
@@ -101,8 +108,6 @@ Este projeto realiza um pipeline de ETL de uma API paginada, desde um endpoint d
     </tr>
       </tbody>
 </table>
-
-
 
 ## Estrutura do Projeto
 
