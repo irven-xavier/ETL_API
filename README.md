@@ -19,7 +19,7 @@ Este projeto realiza um pipeline de ETL de uma API paginada, desde um endpoint d
     - Requisição do tipo POST
     - Autenticação com os headers (content-type, authorization e user-agent)
     - Identificação dos parâmetros e payload (body)
-    - Setup de um banco de dados Postegres no Render
+    - Setup de um banco de dados PostegreSQL no Render
 
 2. **Criação de tabela**
 
@@ -52,8 +52,8 @@ Este projeto realiza um pipeline de ETL de uma API paginada, desde um endpoint d
 
 ## **Tecnologias e Ferramentas**
 
-- Python 3.11.1
-- Bibliotecas:
+- **Python** 3.11.1
+- **Bibliotecas**:
     - `requests`: para consumir a API
     - `os`: para manipular as variáveis de ambiente
     - `json`: para manipular o payload e extrair os dados
@@ -63,10 +63,10 @@ Este projeto realiza um pipeline de ETL de uma API paginada, desde um endpoint d
     - `tracemalloc`: para monitorar o pico de memória utilizado durante toda a execução
     - `time`: para medir o tempo de duração da execução de todo o código
 
-- Postman: para testar o endpoint da API
-- Render: para hospedar o DB
-- PostgreSQL: DB para armazenar os dados
-- pgAdmin 4: para acompanhar os dados e executar queries SQL
+- **Postman**: para testar o endpoint da API
+- **Render**: para hospedar o DB
+- **PostgreSQL**: DB para armazenar os dados
+- **pgAdmin 4**: para acompanhar os dados e executar queries SQL
 
 ## Exemplo de Output
 
