@@ -46,7 +46,7 @@ Este projeto realiza um pipeline de ETL de uma API paginada, desde um endpoint d
 ## Fluxo da ETL
 
 <div align="center">
-  <img src="https://github.com/irven-xavier/ETL_API/blob/main/Fluxo_ETL_API.png" 
+  <img src="https://github.com/irven-xavier/ETL_API/blob/main/assets/Fluxo_ETL_API.png" 
        alt="Fluxo ETL_API" width="700"/>
 </div>
 
