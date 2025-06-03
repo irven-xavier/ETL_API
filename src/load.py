@@ -14,23 +14,10 @@ def carregar_dados(dados):
     # Processamento da carga de dados
     try:
 
-        data_dicts = [
-
-            {
-                "id": d.id,
-                "data": d.data,
-                "categoria": d.categoria,
-                "valor": d.valor,
-                "parcelas": d.parcelas,
-                "data_extracao": d.data_extracao,
-            }
-
-            for d in dados
-
-        ]
+        logging.info("Iniciando o carregamento dos dados no PostgreSQL... \n")
 
         # Insere os valores do dicionário acima na tabela
-        stmt = insert(tabela_vendas).values(data_dicts)
+        stmt = insert(tabela_vendas).values(dados)
 
         # Em caso de conflito, id existente, os valores não serão adicionandos e nem atualizados
         stmt = stmt.on_conflict_do_nothing(index_elements=['id'])
@@ -41,7 +28,7 @@ def carregar_dados(dados):
             # Executa a conexão e insere os dados, se houver mais dados    
             conn.execute(stmt)
 
-        logging.info(f"Carregamento no Postgre concluído: {len(data_dicts)} registros processados. \n")
+        logging.info(f"Carregamento no Postgre concluído: {len(dados)} registros processados. \n")
 
         return True
     

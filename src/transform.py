@@ -5,17 +5,17 @@ from src.create_db import tabela_vendas
 def tratamento(lista_items):
     
     return [
+        # Cria um dicionário para cada item com os campos necessários
+        {
+
+            "id": item['id'],
+            "data": item['competenceDate'],
+            "categoria": item['categoryDescriptions'],
+            "valor": item['value'],
+            "parcelas": item['paymentCondition'],
+            "data_extracao": datetime.now().isoformat()
+
+        }
         
-        tabela_vendas(
-            id = item['id'], # ID da transação
-            data = item['competenceDate'], # Data de competência da transação
-            categoria = item['categoryDescriptions'], # Categoria da transação
-            valor = item['value'], # Valor da categoria
-            parcelas = item['paymentCondition'], # Nº de parcelas da transação
-            data_extracao = datetime.now().isoformat() # Data da captura dos dados
-        )
-
-        # List comprehension para iterar em cada retorno de página
         for item in lista_items
-
     ]
