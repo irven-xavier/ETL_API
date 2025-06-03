@@ -26,9 +26,12 @@ def carregar_dados(dados):
         with engine.begin() as conn:
 
             # Executa a conexão e insere os dados, se houver mais dados    
-            conn.execute(stmt)
+            resultado = conn.execute(stmt)
 
-        logging.info(f"Carregamento no Postgre concluído: {len(dados)} registros processados. \n")
+            # Verifica quantos registros foram inseridos
+            inseridos = resultado.rowcount if resultado.rowcount is not None and resultado.rowcount >= 0 else 'desconhecido'
+
+        logging.info(f"Carregamento no Postgre concluído: {len(dados)} registros processados. Novos registros inseridos: {inseridos}. \n")
 
         return True
     
